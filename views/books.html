@@ -1,0 +1,14 @@
+<a ui-sref="newBook" class="btn-primary btn-lg nodecoration">Add New Book</a>
+<table class="table movietable">
+  <tr>
+    <td><h3>All Books</h3></td>
+    <td></td>
+  </tr>
+  <tr ng-repeat="book in books">
+    <td>{{book.title}}</td>
+    <td>
+      <a class="btn btn-primary" ui-sref="viewMovie({id:book.id})">View</a>
+      <a class="btn btn-danger"  ng-click="deleteMovie(book)">Delete</a>
+    </td>
+  </tr>
+</table>
